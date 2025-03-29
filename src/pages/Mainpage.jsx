@@ -11,6 +11,7 @@ function Mainpage(){
             <Header/>
             <div className="content">
                 <InputBox/>
+                <ListView/>
             </div>
         </div>
     );

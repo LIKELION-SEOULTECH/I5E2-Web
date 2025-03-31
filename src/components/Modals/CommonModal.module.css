@@ -38,18 +38,39 @@ p {
   margin: 0;
   font-size: 16px;
 }
+input {
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 8px;
+  width: 213px;
+  height: 32px;
+  color: rgba(255, 255, 255, 1);
+}
+input::placeholder {
+  color: rgba(180, 180, 180, 1);
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 16px;
+}
 
 /* 버튼 */
-
+.close {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.closeIcon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
 .Btn {
-  background-color: rgba(255, 183, 183, 1);
   border: none;
   width: 172px;
   height: 52px;
   font-size: 20px;
   border-radius: 10px;
   font-weight: bold;
-  color: rgba(242, 72, 34, 1);
   margin: 0 auto;
   cursor: pointer;
 }

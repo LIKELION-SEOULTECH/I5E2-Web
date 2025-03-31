@@ -1,16 +1,32 @@
-import styles from "./StatusModal.module.css";
+import CommonModal from "./CommonModal";
 
+var isSuccess = true; //일단
 const StatusModal = () => {
+  const modalStyle = isSuccess
+    ? {
+        title: "SUCCESS",
+        text: "Delete successfully",
+        color: "#00AE17",
+        bgc: "#CCFF9C",
+      }
+    : {
+        title: "FAILURE",
+        text: "Wrong Password!",
+        color: "#F24822",
+        bgc: "#FFB7B7",
+      };
+
   return (
-    <div className={styles.overlay}>
-      <div className={styles.modalContainer}>
-        <h3 className={styles.title}>FAILURE</h3>
-        <div className={styles.contentArea}>
-          <p>Wrong Password!</p>
-        </div>
-        <button className={styles.Btn}>Close</button>
-      </div>
-    </div>
+    <>
+      <CommonModal
+        title={modalStyle.title}
+        btnText="Close"
+        btnColor={modalStyle.color}
+        btnBgc={modalStyle.bgc}
+      >
+        {modalStyle.text}
+      </CommonModal>
+    </>
   );
 };
 

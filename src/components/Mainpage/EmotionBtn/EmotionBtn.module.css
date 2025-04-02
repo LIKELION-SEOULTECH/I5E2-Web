@@ -16,3 +16,6 @@ span {
 .count {
   font-size: 25px;
 }
+.selectedBtn {
+  border: 2px solid #63636295;
+}

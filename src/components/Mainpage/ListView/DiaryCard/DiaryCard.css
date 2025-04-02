@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 182px;
   width: 240px;
-  padding: 24px 18px;
+  padding: 22px 18px;
   box-sizing: border-box;
   flex-direction: column;
   gap: 10px;
@@ -40,7 +40,8 @@
   padding: 0 6px;
   color: #000;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 최대 2줄 */
+  -webkit-line-clamp: 3; /* 최대 3줄 */
+  line-clamp: 3; /* 권장사항 */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

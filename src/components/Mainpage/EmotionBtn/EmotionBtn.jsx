@@ -1,8 +1,12 @@
 import styles from "./EmotionBtn.module.css";
 
-const EmotionBtn = ({ emotion, count, bgc }) => {
+const EmotionBtn = ({ emotion, count, bgc, isSelected, onClick }) => {
   return (
-    <button style={{ backgroundColor: bgc }}>
+    <button
+      className={isSelected ? styles.selectedBtn : null}
+      style={{ backgroundColor: bgc }}
+      onClick={onClick}
+    >
       <span>{emotion}</span>
       <span className={styles.count}>{count}</span>
     </button>

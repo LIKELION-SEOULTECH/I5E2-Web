@@ -9,6 +9,7 @@ function ListView() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [isModalOpen, setisModalOpen] = useState(false);
 
+  const [selectedEmotion, setSelectedEmotion] = useState(null);
   const emotionCount = dummyDiaryData.reduce((acc, cur) => {
     acc[cur.emotion] = (acc[cur.emotion] || 0) + 1;
     return acc;
@@ -23,11 +24,21 @@ function ListView() {
     setisModalOpen(false);
   };
 
+  const toggleEmotion = (emotion) => {
+    setSelectedEmotion((prev) => (prev === emotion ? null : emotion));
+  };
+  const filteredData = selectedEmotion
+    ? dummyDiaryData.filter((item) => item.emotion === selectedEmotion)
+    : dummyDiaryData;
   return (
     <>
-      <BtnGroup emotionCount={emotionCount} />
+      <BtnGroup
+        emotionCount={emotionCount}
+        selectedEmotion={selectedEmotion}
+        toggleEmotion={toggleEmotion}
+      />
       <div className="listView">
-        {dummyDiaryData.map((item, index) => (
+        {filteredData.map((item, index) => (
           <DiaryCard key={index} data={item} onClick={() => cardOpen(item)} />
         ))}
         {isModalOpen && (

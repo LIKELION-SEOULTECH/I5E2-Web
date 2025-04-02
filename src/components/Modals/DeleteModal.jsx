@@ -10,9 +10,7 @@ const DeleteModal = ({ onClose, onDelete, cardData }) => {
   const [statusModalOpen, setStatusModalOpen] = useState(false);
 
   const openStatusModal = () => {
-    password === "1234"
-      ? (window.isSuccess = true)
-      : (window.isSuccess = false);
+    window.isSuccess = password === "1234"; //일단
     setStatusModalOpen(true);
 
     window.isSuccess && onDelete(cardData.id);

@@ -12,7 +12,7 @@ function ListView() {
   const [isModalOpen, setisModalOpen] = useState(false);
 
   const [selectedEmotion, setSelectedEmotion] = useState(null);
-  const emotionCount = dummyDiaryData.reduce((acc, cur) => {
+  const emotionCount = diaryData.reduce((acc, cur) => {
     acc[cur.emotion] = (acc[cur.emotion] || 0) + 1;
     return acc;
   }, {});

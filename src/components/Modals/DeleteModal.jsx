@@ -4,7 +4,7 @@ import styles from "./DeleteModal.module.css";
 import closeIcon from "/src/assets/Icons/close.svg";
 import StatusModal from "./StatusModal";
 
-const DeleteModal = ({ onClose }) => {
+const DeleteModal = ({ onClose, onDelete, cardData }) => {
   const btnStyle = { color: "#F24822", bgc: "#FFB7B7" };
   const [password, setPassword] = useState("");
   const [statusModalOpen, setStatusModalOpen] = useState(false);
@@ -14,6 +14,8 @@ const DeleteModal = ({ onClose }) => {
       ? (window.isSuccess = true)
       : (window.isSuccess = false);
     setStatusModalOpen(true);
+
+    window.isSuccess && onDelete(cardData.id);
   };
 
   const closeStatusModal = () => {

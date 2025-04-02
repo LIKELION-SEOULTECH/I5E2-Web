@@ -6,6 +6,8 @@ import LogModal from "../../Modals/LogModal";
 import BtnGroup from "../EmotionBtn/BtnGroup";
 
 function ListView() {
+  const [diaryData, setDiaryData] = useState(dummyDiaryData);
+
   const [selectedCard, setSelectedCard] = useState(null);
   const [isModalOpen, setisModalOpen] = useState(false);
 
@@ -28,8 +30,12 @@ function ListView() {
     setSelectedEmotion((prev) => (prev === emotion ? null : emotion));
   };
   const filteredData = selectedEmotion
-    ? dummyDiaryData.filter((item) => item.emotion === selectedEmotion)
-    : dummyDiaryData;
+    ? diaryData.filter((item) => item.emotion === selectedEmotion)
+    : diaryData;
+
+  const deleteCard = (id) => {
+    setDiaryData((prev) => prev.filter((item) => item.id !== id));
+  };
   return (
     <>
       <BtnGroup
@@ -39,10 +45,19 @@ function ListView() {
       />
       <div className="listView">
         {filteredData.map((item, index) => (
-          <DiaryCard key={index} data={item} onClick={() => cardOpen(item)} />
+          <DiaryCard
+            key={index}
+            id={item.id}
+            data={item}
+            onClick={() => cardOpen(item)}
+          />
         ))}
         {isModalOpen && (
-          <LogModal cardData={selectedCard} onClose={cardClose} />
+          <LogModal
+            cardData={selectedCard}
+            onClose={cardClose}
+            onDelete={deleteCard}
+          />
         )}
       </div>
     </>

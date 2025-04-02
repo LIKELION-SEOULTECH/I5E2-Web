@@ -1,52 +1,74 @@
 [
-    {
-      "date": "2024. 02. 28 (수) 15:09",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:12",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipi"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloreㅁㅁㄴㅇㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    },
-    {
-      "date": "2024. 02. 28 (수) 15:14",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si"
-    }
-    
-
-  ]
+  {
+    "date": "2024.02.28 15:09",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "username": "아기사자1",
+    "emotion": "중립"
+  },
+  {
+    "date": "2024.02.28 15:12",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자2",
+    "emotion": "행복"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipi",
+    "username": "아기사자3",
+    "emotion": "분노"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloreㅁㅁㄴㅇㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ",
+    "username": "아기사자4",
+    "emotion": "놀람"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자5",
+    "emotion": "슬픔"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자6",
+    "emotion": "행복"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자7",
+    "emotion": "공포"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자8",
+    "emotion": "혐오"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자9",
+    "emotion": "중립"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자10",
+    "emotion": "분노"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자11",
+    "emotion": "슬픔"
+  },
+  {
+    "date": "2024.02.28 15:14",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor si",
+    "username": "아기사자12",
+    "emotion": "놀람"
+  }
+]

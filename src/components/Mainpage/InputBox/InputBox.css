@@ -1,61 +1,79 @@
 .InputBox {
-    display: flex;
-    width: 1200px;
-    height: 240px;
-    padding: 20px;
-    flex-direction: column;
-    gap: 30px;
-    border-radius: 16px;
-    background: #FFF;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  width: 1200px;
+  height: 240px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 16px;
+  background: #fffbf3;
+  border: 1px solid #e2e1da;
+  /* box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); */
 }
 
 .inputdiary {
-    display: flex;
-    width: 1160px;
-    height: 120px;
-    padding: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 16px;
-    background: #F2F2F2;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  width: 1160px;
+  height: 120px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #ffffff;
+  font-size: 16px;
+  border: none;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); */
 }
 
-
 .inputdiary:focus {
-    outline: none;
+  outline: none;
 }
 
 .buttonArea {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+.buttonArea input {
+  width: 213px;
+  height: 32px;
+  font-size: 16px;
+  color: #333;
+}
+.buttonArea input:focus {
+  outline: 2px solid #f08313;
+}
+textarea::placeholder,
+.buttonArea input::placeholder {
+  color: #b4b4b4;
+  font-size: 16px;
+  padding: 0;
 }
 
 .submitButton {
-    display: flex;
-    width: 100px;
-    height: 30px;
-    padding: 11px 21px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    background: #FA0;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  width: 147px;
+  height: 50px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #fa0;
+  font-size: 20px;
+  font-weight: 500;
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 }
 
 .buttonArea input {
-    display: flex;
-    width: 213px;
-    height: 22px;
-    padding: 5px 16px;
-    align-items: center;
-    border-radius: 8px;
-    border: 1px solid #000;
-    background: #FFF;
+  width: 213px;
+  height: 32px;
+  line-height: 32px;
+  box-sizing: border-box;
+  padding: 5px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e1da;
+  background: #fff;
 }

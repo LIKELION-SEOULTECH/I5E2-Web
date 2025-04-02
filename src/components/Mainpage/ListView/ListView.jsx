@@ -1,8 +1,8 @@
-import DiaryCard from './DiaryCard/DiaryCard';
-import './ListView.css';
-import dummyDiaryData from '../../../data/dummyDiaryData.json';
+import DiaryCard from "./DiaryCard/DiaryCard";
+import "./ListView.css";
+import dummyDiaryData from "../../../data/dummyDiaryData.json";
 
-function ListView({ diaryList }) {
+function ListView() {
   return (
     <div className="listView">
       {dummyDiaryData.map((item, index) => (

@@ -13,7 +13,6 @@ function Mainpage() {
       <Header />
       <div className="content">
         <InputBox />
-        <BtnGroup />
         <ListView />
         <PaginationBar />
       </div>

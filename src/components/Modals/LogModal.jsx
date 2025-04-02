@@ -1,34 +1,58 @@
 import closeIcon from "/src/assets/Icons/close.svg";
 import deleteIcon from "/src/assets/Icons/trash.svg";
 import styles from "./LogModal.module.css";
+import { emotionInfo } from "/src/constants/emotionInfo";
+import { useState } from "react";
+import DeleteModal from "../Modals/DeleteModal";
 
-const LogModal = () => {
+const LogModal = ({ cardData, onClose }) => {
+  const [deleteBtnClick, setDeleteBtnClick] = useState(false);
+
+  const openDeleteModal = () => {
+    setDeleteBtnClick(true);
+  };
+
   return (
-    <div className={styles.overlay}>
-      <div className={styles.modalContainer}>
-        <div className={styles.close}>
-          <img src={closeIcon} alt="닫기 버튼" className={styles.closeIcon} />
-        </div>
+    <>
+      <div className={styles.overlay}>
+        <div className={styles.modalContainer}>
+          <div className={styles.close}>
+            <img
+              src={closeIcon}
+              alt="닫기 버튼"
+              className={styles.closeIcon}
+              onClick={onClose}
+            />
+          </div>
 
-        <div className={styles.dataInfo}>
-          <b>2024.03.31 (일) 15:09</b>
-          <p>맛있는군고구마123</p>
-        </div>
+          <div className={styles.dataInfo}>
+            <b>{cardData.date}</b>
+            <p>{cardData.username}</p>
+          </div>
 
-        <div className={styles.cardContent}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </div>
+          <div className={styles.cardContent}>{cardData.content}</div>
 
-        <div className={styles.emojiWrap}>
-          <b>텍스트 감정 분석 결과</b>
-          <div className={styles.emoji}>😀</div>
-        </div>
+          <div className={styles.emojiWrap}>
+            <b>텍스트 감정 분석 결과</b>
+            <div
+              className={styles.emoji}
+              style={{ backgroundColor: emotionInfo[cardData.emotion].color }}
+            >
+              {emotionInfo[cardData.emotion].emoji}
+            </div>
+          </div>
 
-        <div className={styles.delete}>
-          <img src={deleteIcon} alt="삭제 버튼" className={styles.deleteIcon} />
+          <div className={styles.delete} onClick={openDeleteModal}>
+            <img
+              src={deleteIcon}
+              alt="삭제 버튼"
+              className={styles.deleteIcon}
+            />
+          </div>
         </div>
       </div>
-    </div>
+      {deleteBtnClick && <DeleteModal onClose={onClose} />}
+    </>
   );
 };
 

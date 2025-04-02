@@ -9,11 +9,12 @@
   gap: 10px;
   border-radius: 16px;
   background: #fff;
-  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); */
+  cursor: pointer;
 }
 .card-top {
   display: flex;
   gap: 16px;
+  height: 70px;
 }
 .top-icon {
   font-size: 50px;

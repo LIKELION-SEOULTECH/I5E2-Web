@@ -1,8 +1,7 @@
 import CommonModal from "./CommonModal";
 
-var isSuccess = true; //일단
-const StatusModal = () => {
-  const modalStyle = isSuccess
+const StatusModal = ({ onClose }) => {
+  const modalStyle = window.isSuccess
     ? {
         title: "SUCCESS",
         text: "Delete successfully",
@@ -19,6 +18,7 @@ const StatusModal = () => {
   return (
     <>
       <CommonModal
+        onClick={onClose}
         title={modalStyle.title}
         btnText="Close"
         btnColor={modalStyle.color}

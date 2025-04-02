@@ -1,6 +1,13 @@
 import styles from "./CommonModal.module.css";
 
-const CommonModal = ({ title, btnText, btnColor, btnBgc, children }) => {
+const CommonModal = ({
+  title,
+  btnText,
+  btnColor,
+  onClick,
+  btnBgc,
+  children,
+}) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modalContainer}>
@@ -9,6 +16,7 @@ const CommonModal = ({ title, btnText, btnColor, btnBgc, children }) => {
         <button
           className={styles.Btn}
           style={{ backgroundColor: btnBgc, color: btnColor }}
+          onClick={onClick}
         >
           {btnText}
         </button>

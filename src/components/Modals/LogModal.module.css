@@ -1,0 +1,81 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  background-color: #faf5ed;
+  border-radius: 12px;
+  padding: 30px;
+  width: 1200px;
+  height: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px 0px #00000040;
+  box-sizing: border-box;
+}
+
+.dataInfo {
+  font-size: 16px;
+  display: flex;
+  gap: 20px;
+}
+.dataInfo p {
+  margin: 0;
+}
+.cardContent {
+  font-size: 16px;
+  flex: 1;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* 이모지 */
+.emojiWrap {
+  font-size: 16px;
+}
+.emoji {
+  margin-top: 20px;
+  font-size: 48px;
+  width: 144px;
+  height: 80px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #dadada;
+  line-height: 80px;
+}
+
+/* close , delete */
+.close {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.closeIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.delete {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.deleteIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background-color: #ffb7b7;
+  padding: 12px;
+  border-radius: 10px;
+}

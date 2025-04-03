@@ -1,0 +1,35 @@
+p {
+  margin: 0;
+  font-size: 16px;
+}
+input {
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 8px;
+  width: 213px;
+  height: 32px;
+  padding-left: 16px;
+  font-size: 16px;
+}
+input::placeholder {
+  color: rgba(180, 180, 180, 1);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0;
+}
+input:focus {
+  outline: 2px solid #ffaa00;
+  border: none;
+  color: #ffaa00;
+}
+/* 버튼 */
+.close {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.closeIcon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

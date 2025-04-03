@@ -1,0 +1,7 @@
+.PaginationWrap {
+  display: flex;
+  gap: 70px;
+}
+img {
+  cursor: pointer;
+}

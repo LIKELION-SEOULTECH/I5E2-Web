@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/v1/post'; // Spring 서버 주소에 맞게 수정
+const API_BASE_URL = 'http://localhost:8080/api/v1/post'; 
 
 export const fetchPagedPosts = async (page, size) => {
   try {

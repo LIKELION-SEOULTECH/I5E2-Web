@@ -9,12 +9,12 @@ const analyzeEmotion = async (text) => {
 
 export const createPost = async ({ username, password, content }) => {
   try {
-    const emotion = await analyzeEmotion(content); // Flask에서 감정 분석
+    const emotion = "중립"; 
     const response = await axios.post("/api/v1/post", {
       username,
       password,
       content,
-      emotion, // 분석 결과 전송
+      emotion, 
     });
     return response.data;
   } catch (err) {

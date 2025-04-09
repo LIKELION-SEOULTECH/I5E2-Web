@@ -5,7 +5,7 @@ import LogModal from "../../Modals/LogModal";
 import PaginationBar from "./PageNum/PaginationBar";
 import { fetchPagedPosts } from "../../../api/post"; // api 함수 추가
 
-function ListView() {
+function ListView( reloadTrigger ) {
   const [diaryData, setDiaryData] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [isModalOpen, setisModalOpen] = useState(false);
@@ -14,7 +14,7 @@ function ListView() {
 
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
-  const PAGE_SIZE = 6;
+  const PAGE_SIZE = 8;
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -27,7 +27,7 @@ function ListView() {
       }
     };
     loadPosts();
-  }, [currentPage]);
+  }, [currentPage, reloadTrigger]);
 
   const toggleEmotion = (emotion) => {
     setSelectedEmotion((prev) => (prev === emotion ? null : emotion));

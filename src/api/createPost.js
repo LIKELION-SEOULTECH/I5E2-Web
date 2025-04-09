@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const analyzeEmotion = async (text) => {
-  const response = await axios.post("http://localhost:5001/emotion", {
+  const response = await axios.post("/emotion", {
     text,
   });
   return response.data.emotion_name;
@@ -9,7 +9,7 @@ const analyzeEmotion = async (text) => {
 
 export const createPost = async ({ username, password, content }) => {
   try {
-    const emotion = "중립"; 
+    const emotion = await analyzeEmotion(content); 
     const response = await axios.post("/api/v1/post", {
       username,
       password,

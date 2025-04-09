@@ -1,52 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DiaryCard from "./DiaryCard/DiaryCard";
 import "./ListView.css";
-import dummyDiaryData from "../../../data/dummyDiaryData.json";
 import LogModal from "../../Modals/LogModal";
-import BtnGroup from "../EmotionBtn/BtnGroup";
+import PaginationBar from "./PageNum/PaginationBar";
+import { fetchPagedPosts } from "../../../api/post"; // api 함수 추가
 
-function ListView() {
-  const [diaryData, setDiaryData] = useState(dummyDiaryData);
-
+function ListView( reloadTrigger ) {
+  const [diaryData, setDiaryData] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [isModalOpen, setisModalOpen] = useState(false);
 
   const [selectedEmotion, setSelectedEmotion] = useState(null);
-  const emotionCount = diaryData.reduce((acc, cur) => {
-    acc[cur.emotion] = (acc[cur.emotion] || 0) + 1;
-    return acc;
-  }, {});
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
+  const PAGE_SIZE = 8;
+
+  useEffect(() => {
+    const loadPosts = async () => {
+      try {
+        const data = await fetchPagedPosts(currentPage, PAGE_SIZE);
+        setDiaryData(data.posts);
+        setTotalPages(data.totalPages);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    loadPosts();
+  }, [currentPage, reloadTrigger]);
+
+  const toggleEmotion = (emotion) => {
+    setSelectedEmotion((prev) => (prev === emotion ? null : emotion));
+  };
+
+  const filteredData = selectedEmotion
+    ? diaryData.filter((item) => item.emotion === selectedEmotion)
+    : diaryData;
 
   const cardOpen = (card) => {
     setSelectedCard(card);
     setisModalOpen(true);
   };
+
   const cardClose = () => {
     setSelectedCard(null);
     setisModalOpen(false);
   };
 
-  const toggleEmotion = (emotion) => {
-    setSelectedEmotion((prev) => (prev === emotion ? null : emotion));
-  };
-  const filteredData = selectedEmotion
-    ? diaryData.filter((item) => item.emotion === selectedEmotion)
-    : diaryData;
-
   const deleteCard = (id) => {
     setDiaryData((prev) => prev.filter((item) => item.id !== id));
   };
+
   return (
     <>
-      <BtnGroup
-        emotionCount={emotionCount}
-        selectedEmotion={selectedEmotion}
-        toggleEmotion={toggleEmotion}
-      />
       <div className="listView">
         {filteredData.map((item, index) => (
           <DiaryCard
-            key={index}
+            key={item.id}
             id={item.id}
             data={item}
             onClick={() => cardOpen(item)}
@@ -60,6 +70,11 @@ function ListView() {
           />
         )}
       </div>
+      <PaginationBar
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={(page) => setCurrentPage(page)}
+      />
     </>
   );
 }

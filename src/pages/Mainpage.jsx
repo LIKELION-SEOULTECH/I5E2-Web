@@ -13,7 +13,7 @@ function Mainpage() {
       <Header />
       <div className="content">
         <InputBox onPostSubmit={() => setReloadTrigger(prev => !prev)} />
-        <ListView />
+        <ListView onPostSubmit={() => setReloadTrigger(prev => !prev)} reloadTrigger = {reloadTrigger}/>
       </div>
     </div>
   );

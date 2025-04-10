@@ -3,22 +3,34 @@ import CommonModal from "./CommonModal";
 import styles from "./DeleteModal.module.css";
 import closeIcon from "/src/assets/Icons/close.svg";
 import StatusModal from "./StatusModal";
+import { deletePost } from "../../api/deletePost";
 
-const DeleteModal = ({ onClose, onDelete, cardData }) => {
+const DeleteModal = ({ onClose, onDelete, cardData, onPostSubmit }) => {
   const btnStyle = { color: "#F24822", bgc: "#FFB7B7" };
   const [password, setPassword] = useState("");
   const [statusModalOpen, setStatusModalOpen] = useState(false);
 
-  const openStatusModal = () => {
-    window.isSuccess = password === "1234"; //일단
+  const openStatusModal = async () => {
+    try {
+      const response = await deletePost(cardData.postId, password); 
+
+      if (response.status === 200) {
+        window.isSuccess = true;
+        onDelete(cardData.id); 
+      } else {
+        window.isSuccess = false;
+      }
+    } catch (error) {
+      window.isSuccess = false;
+      console.error("Error deleting post:", error);
+    }
+
     setStatusModalOpen(true);
-
-    window.isSuccess && onDelete(cardData.id);
   };
-
   const closeStatusModal = () => {
     setStatusModalOpen(false);
-    onClose(); // DeleteModal까지 닫기
+    onClose(); 
+    onPostSubmit();
   };
 
   return (

@@ -5,7 +5,7 @@ import { emotionInfo } from "/src/constants/emotionInfo";
 import { useState } from "react";
 import DeleteModal from "../Modals/DeleteModal";
 
-const LogModal = ({ cardData, onClose, onDelete }) => {
+const LogModal = ({ cardData, onClose, onDelete, onPostSubmit }) => {
   const [deleteBtnClick, setDeleteBtnClick] = useState(false);
 
   const openDeleteModal = () => {
@@ -56,6 +56,7 @@ const LogModal = ({ cardData, onClose, onDelete }) => {
           onClose={onClose}
           onDelete={(id) => onDelete(id)}
           cardData={cardData}
+          onPostSubmit = {onPostSubmit}
         />
       )}
     </>

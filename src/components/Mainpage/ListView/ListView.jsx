@@ -4,8 +4,9 @@ import "./ListView.css";
 import LogModal from "../../Modals/LogModal";
 import PaginationBar from "./PageNum/PaginationBar";
 import { fetchPagedPosts } from "../../../api/post"; // api 함수 추가
+import BtnGroup from "../EmotionBtn/BtnGroup";
 
-function ListView( reloadTrigger ) {
+function ListView({ onPostSubmit, reloadTrigger }) {
   const [diaryData, setDiaryData] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [isModalOpen, setisModalOpen] = useState(false);
@@ -67,6 +68,7 @@ function ListView( reloadTrigger ) {
             cardData={selectedCard}
             onClose={cardClose}
             onDelete={deleteCard}
+            onPostSubmit={onPostSubmit}
           />
         )}
       </div>
